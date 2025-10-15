@@ -1,0 +1,90 @@
+# 🔧 Understanding Namespaces in C++
+
+In **C++**, a **namespace** is a way to group related classes, functions, and variables under a distinct name to avoid naming conflicts and organize code.
+
+### 📌 Why Use Namespaces?
+
+- **Avoids Name Collisions:** If two libraries have functions or variables with the same name, namespaces prevent conflicts.
+- **Organizes Code:** Large projects or libraries can be split into logical groups.
+
+---
+
+### **How to Declare and Use a Namespace**
+
+#### **Declaration**
+
+```cpp
+namespace MyNamespace 
+{
+    int value = 10;
+
+    void printValue() 
+    {
+        std::cout << "Value: " << value << std::endl;
+    }
+}
+```
+
+#### 🧪 **Usage**
+
+You access items in a namespace using the `::` (scope resolution) operator:
+
+```cpp
+int main() 
+{
+    MyNamespace::printValue();      // Access function in MyNamespace
+    std::cout << MyNamespace::value << std::endl; // Access variable in MyNamespace
+    return 0;
+}
+```
+
+---
+
+### **The `using` Directive**
+
+To avoid typing the namespace prefix every time, you can use the `using` directive:
+
+```cpp
+using namespace MyNamespace;
+
+int main() 
+{
+    printValue();           // No need for MyNamespace::
+    std::cout << value << std::endl;
+    return 0;
+}
+```
+*Note: This brings all names from the namespace into the current scope. Use with care, especially in large projects, to avoid name clashes.*
+
+---
+
+### 🎯 **Standard Namespace Example**
+
+The C++ Standard Library is in the `std` namespace:
+
+```cpp
+#include <iostream>
+
+int main() 
+{
+    std::cout << "Hello, World!" << std::endl; // std namespace
+    return 0;
+}
+```
+Or:
+```cpp
+using namespace std;
+
+int main() 
+{
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+```
+
+---
+
+### **Nested and Anonymous Namespaces**
+
+- **Nested:** Namespaces can be inside other namespaces.
+- **Anonymous:** `namespace { ... }` creates a unique, unnamed namespace (useful for limiting scope to a file).
