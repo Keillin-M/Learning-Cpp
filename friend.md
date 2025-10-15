@@ -10,9 +10,9 @@ In **C++**, the keyword **`friend`** is used to allow certain functions or class
 2. **Friend Class:**  
    You can declare an entire class as a friend. All member functions of the friend class will then have access to the private and protected members of the class where the friendship is declared.
 
-## Syntax
+## 🧪 Syntax
 
-### 🧪  Friend Function
+###  Friend Function
 ```cpp
 class MyClass {
 private:
@@ -27,7 +27,7 @@ void showData(const MyClass& obj) {
 }
 ```
 
-### 👫 Friend Class
+### Friend Class
 ```cpp
 class MyClass {
 private:
