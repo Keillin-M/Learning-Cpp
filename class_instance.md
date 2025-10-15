@@ -2,6 +2,32 @@
 
 A **class** in C++ (and many other programming languages) is a blueprint or template for creating objects. It defines the structure (data members/variables) and behavior (methods/functions) that its objects will have.
 
+## 🏗️ **Constructor**
+A **constructor** is a special member function of a class that is called automatically when an object is created. It is typically used to initialize member attributes.
+
+```cpp
+class Car {
+public:
+    std::string color;
+    Car(std::string c) { // Constructor
+        color = c;
+    }
+};
+Car myCar("Red"); // Calls constructor
+```
+
+## 🧹 **Destructor**
+A **destructor** is a special member function that is called automatically when an object is destroyed (for example, when it goes out of scope). It is typically used to release resources or perform cleanup.
+
+```cpp
+class Car {
+public:
+    ~Car() { // Destructor
+        std::cout << "Car destroyed." << std::endl;
+    }
+};
+```
+
 **Example:**
 ```cpp
 class Car {
@@ -96,3 +122,4 @@ neighborHouse.openDoor();
 ## 🧾 **Summary:**  
 - The **class** is the blueprint (plan).
 - The **instance** is the actual house (object) built based on the blueprint.
+
