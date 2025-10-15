@@ -10,7 +10,6 @@ In C++, **`iostream`** is a standard library header (`#include <iostream>`) that
 ---
 
 ### **cin**  
-- Pronounced "see-in".
 - Used to get input from the user.
 - Example usage:
     ```cpp
@@ -20,7 +19,6 @@ In C++, **`iostream`** is a standard library header (`#include <iostream>`) that
     This reads a value from the user and stores it in the variable `age`.
 
 ### **cout**  
-- Pronounced "see-out".
 - Used to display output to the user.
 - Example usage:
     ```cpp
